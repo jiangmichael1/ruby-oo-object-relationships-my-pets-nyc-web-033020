@@ -1,14 +1,15 @@
 class Cat
-  attr_reader :name
+
   attr_accessor :owner, :mood
+  attr_reader :name
 
   @@all = []
 
-  def initialize (name, owner, mood = "nervous")
+  def initialize(name, owner, mood = 'nervous')
     @name = name
     @owner = owner
     @mood = mood
-    Cat.all << self
+    @@all << self
   end
 
   def self.all
